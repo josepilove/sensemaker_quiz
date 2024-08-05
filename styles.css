@@ -1,0 +1,132 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: inline-block;
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    display: none;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.card.active {
+    display: block;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:focus {
+    outline: 2px solid #333;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#result img {
+    max-width: 100%;
+    height: auto;
+}
+
+#downloadButton, #shareButton, #emailButton {
+    margin-top: 10px;
+}
+
+.progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#progress-label {
+    margin-right: 10px;
+    color: #000;
+}
+
+#progress-bar-container {
+    display: flex;
+    gap: 10px;
+}
+
+.progress-segment {
+    width: 30px;
+    height: 30px;
+    background-color: #fff; /* Default background color */
+    color: #000; /* Default text color */
+    border: 2px solid #4CAF50; /* Match navigation button color */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.progress-segment.active,
+.progress-segment.current {
+    background-color: #4CAF50; /* Match navigation button color */
+    color: #fff; /* Ensure the text remains white when active or current */
+}
+
+#navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button[type="button"]:first-of-type {
+    float: left;
+}
+
+button[type="button"]:nth-of-type(2), button[type="button"]:nth-of-type(3) {
+    float: right;
+}
