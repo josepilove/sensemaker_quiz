@@ -1,25 +1,31 @@
-/* styles.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     text-align: center;
     background-color: #f7f7f7;
     margin: 0;
     padding: 20px;
+    font-size: 1em;
 }
 
 h1 {
     color: #333;
 }
 
+h3 {
+    text-align: center;
+    font-size: 2em;
+}
+
 form {
     background: #fff;
-    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: inline-block;
     text-align: left;
-    max-width: 800px;
+    max-width: 100%;
     margin: auto;
+    width: 100%;
+    padding: 2em 0;
 }
 
 .card-container {
@@ -30,16 +36,37 @@ form {
 
 .card {
     display: none;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    max-width: 800px;
+    max-width: 100%;
 }
 
 .card.active {
     display: block;
+}
+
+#title-card {
+    background-image: url("https://cdn.glitch.global/9df5ded1-1739-4f54-8568-e22251edae46/_WhichTypeOfSensemakerAreYou.png?v=1722863958313");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding-bottom: 100%; /* Maintain aspect ratio */
+    position: relative;
+    margin: 0 auto;
+
+}
+#title-card button {
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 2%;
+    margin-bottom: 0;
+    width: 100%;
 }
 
 label {
@@ -48,26 +75,29 @@ label {
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #fff;
+    color: #000;
     border: none;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    display: block;
+    clear: left;
     cursor: pointer;
     border-radius: 5px;
+    box-sizing: border-box;
+    outline: 2px solid #333;
+    width: 90%;
+    font-size: 1em;
+    margin: 25px auto;
 }
 
 button:focus {
-    outline: 2px solid #333;
+    outline: 2px solid #000;
 }
 
 #result {
     margin-top: 20px;
-    font-size: 18px;
     text-align: center;
 }
 
@@ -76,57 +106,70 @@ button:focus {
     height: auto;
 }
 
-#downloadButton, #shareButton, #emailButton {
-    margin-top: 10px;
-} 
-
-.progress {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-#progress-label {
-    margin-right: 10px;
-    color: #000;
-}
-
-#progress-bar-container {
-    display: flex;
-    gap: 10px;
-}
-
-.progress-segment {
-    width: 30px;
-    height: 30px;
-    background-color: #fff; /* Default background color */
-    color: #000; /* Default text color */
-    border: 2px solid #4CAF50; /* Match navigation button color */
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-}
-
-.progress-segment.active,
-.progress-segment.current {
-    background-color: #4CAF50; /* Match navigation button color */
-    color: #fff; /* Ensure the text remains white when active or current */
-}
-
 #navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+}
+#navigation button {
+    color: blue;
+    outline: 0;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 1em;
+    margin: 0;
+}
+.blue:hover, .blue:active {
+    background: #7a85bd7e
+}
+.yellow:hover, .yellow:active {
+    background: #F5C06A7e
+}
+.purple:hover, .purple:active {
+    background: #9778BD7e
+}
+.green:hover, .green:active {
+    background: #72A86E7e
+}
+.red:hover, .red:active {
+    background: #C9745D7e
+}
+#title-card button:hover, #title-card button:active {
+    background: black;
+    color: white;
 }
 
-button[type="button"]:first-of-type {
-    float: left;
+/* Responsive Adjustments */
+@media (min-width: 600px) {
+    form {
+        max-width: 90vw;
+    }
+
+    button {
+        font-size: 1.2em;
+    }
+
+    #navigation button {
+        font-size: 1em;
+    }
 }
 
-button[type="button"]:nth-of-type(2), button[type="button"]:nth-of-type(3) {
-    float: right;
+@media (min-width: 800px) {
+    #title-card {
+        width: 50vw;
+        height: 50vw;
+        padding-bottom: 0;
+    }
+
+    button {
+        font-size: 1.2em;
+        width: 50vw;
+    }
+
+    #navigation button {
+        font-size: 1.2em;
+    }
+    #result img{
+        width: 50vw;
+    }
 }

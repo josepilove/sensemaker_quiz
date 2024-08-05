@@ -7,77 +7,61 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Which Type of Sensemaker Are You?</h1>
-    </header>
     <main>
         <form id="quiz-form" aria-labelledby="quiz-title">
             <div class="card-container">
                 <div class="card active" id="title-card" role="region" aria-labelledby="title-card">
-                    <img src="_WhichTypeOfSensemakerAreYou.png" alt="Which Type of Sensemaker Are You?" width="800">
+                    
                     <button type="button" onclick="startQuiz()">Start</button>
                 </div>
                 <div class="card" id="card-1" role="region" aria-labelledby="q1-title">
-                    <h3 id="q1-title" style="color: #7A85BD;">How do you prefer to lead?</h3>
-                    <label><input type="radio" name="q1" value="A" required> By supporting others and being a servant leader.</label><br>
-                    <label><input type="radio" name="q1" value="B"> By building meaningful connections and enhancing people skills.</label><br>
-                    <label><input type="radio" name="q1" value="C"> By working independently and thriving on creativity.</label><br>
-                    <label><input type="radio" name="q1" value="D"> By managing your own business and enjoying the freedom it offers.</label><br>
-                    <label><input type="radio" name="q1" value="E"> By diving into complex problems and exploring new perspectives.</label><br>
+                    <h3 id="q1-title">How do you prefer to lead?</h3>
+                    <button class='red' type="button" onclick="selectAnswer(1, 'A')">By supporting others and being a servant leader.</button>
+                    <button class='yellow' type="button" onclick="selectAnswer(1, 'B')">By building meaningful connections and enhancing people skills.</button>
+                    <button class='green' type="button" onclick="selectAnswer(1, 'C')">By working independently and thriving on creativity.</button>
+                    <button class='blue' type="button" onclick="selectAnswer(1, 'D')">By managing your own business and enjoying the freedom it offers.</button>
+                    <button class='purple' type="button" onclick="selectAnswer(1, 'E')">By diving into complex problems and exploring new perspectives.</button>
                 </div>
                 <div class="card" id="card-2" role="region" aria-labelledby="q2-title">
-                    <h3 id="q2-title" style="color: #F5C06A;">What kind of environment do you excel in?</h3>
-                    <label><input type="radio" name="q2" value="A" required> Collaborative but focused on servant leadership.</label><br>
-                    <label><input type="radio" name="q2" value="B"> Highly collaborative and relationship-focused.</label><br>
-                    <label><input type="radio" name="q2" value="C"> Independent and creative.</label><br>
-                    <label><input type="radio" name="q2" value="D"> Independent and entrepreneurial.</label><br>
-                    <label><input type="radio" name="q2" value="E"> Deep thinking and knowledge-driven.</label><br>
+                    <h3 id="q2-title">yellowWhat kind of environment do you excel in?</h3>
+                    <button class='red' type="button" onclick="selectAnswer(2, 'A')">Collaborative but focused on servant leadership.</button>
+                    <button class='yellow'type="button" onclick="selectAnswer(2, 'B')">Highly collaborative and relationship-focused.</button>
+                    <button class='green' type="button" onclick="selectAnswer(2, 'C')">Independent and creative.</button>
+                    <button class='blue' type="button" onclick="selectAnswer(2, 'D')">Independent and entrepreneurial.</button>
+                    <button class='purple' type="button" onclick="selectAnswer(2, 'E')">Deep thinking and knowledge-driven.</button>
                 </div>
                 <div class="card" id="card-3" role="region" aria-labelledby="q3-title">
-                    <h3 id="q3-title" style="color: #9778BD;">What kind of support do you seek from a community?</h3>
-                    <label><input type="radio" name="q3" value="A" required> A network to help you lead with confidence.</label><br>
-                    <label><input type="radio" name="q3" value="B"> A community to share and collect practical strategies.</label><br>
-                    <label><input type="radio" name="q3" value="C"> A space to connect and find inspiration from like-minded peers.</label><br>
-                    <label><input type="radio" name="q3" value="D"> A sanctuary to share tips and stay updated with trends.</label><br>
-                    <label><input type="radio" name="q3" value="E"> A place for insightful discussions and connections with peers who share a thirst for knowledge.</label><br>
+                    <h3 id="q3-title">What kind of support do you seek from a community?</h3>
+                    <button class='red' type="button" onclick="selectAnswer(3, 'A')">A network to help you lead with confidence.</button>
+                    <button class='yellow' type="button" onclick="selectAnswer(3, 'B')">A community to share and collect practical strategies.</button>
+                    <button class='green' type="button" onclick="selectAnswer(3, 'C')">A space to connect and find inspiration from like-minded peers.</button>
+                    <button class='blue' type="button" onclick="selectAnswer(3, 'D')">A sanctuary to share tips and stay updated with trends.</button>
+                    <button class='purple' type="button" onclick="selectAnswer(3, 'E')">A place for insightful discussions and connections with peers who share a thirst for knowledge.</button>
                 </div>
                 <div class="card" id="card-4" role="region" aria-labelledby="q4-title">
-                    <h3 id="q4-title" style="color: #72A86E;">How do you handle ambiguity?</h3>
-                    <label><input type="radio" name="q4" value="A" required> With confidence, needing support from a network.</label><br>
-                    <label><input type="radio" name="q4" value="B"> By mending relationships and quilting together intentions.</label><br>
-                    <label><input type="radio" name="q4" value="C"> By finding inspiration during cycles of flow.</label><br>
-                    <label><input type="radio" name="q4" value="D"> By staying up-to-date with trends and sharing tips.</label><br>
-                    <label><input type="radio" name="q4" value="E"> By diving into knowledge quests and exploring new perspectives.</label><br>
+                    <h3 id="q4-title">How do you handle ambiguity?</h3>
+                    <button class='red' type="button" onclick="selectAnswer(4, 'A')">With confidence, needing support from a network.</button>
+                    <button class='yellow' type="button" onclick="selectAnswer(4, 'B')">By mending relationships and quilting together intentions.</button>
+                    <button class='green' type="button" onclick="selectAnswer(4, 'C')">By finding inspiration during cycles of flow.</button>
+                    <button class='blue' type="button" onclick="selectAnswer(4, 'D')">By staying up-to-date with trends and sharing tips.</button>
+                    <button class='purple' type="button" onclick="selectAnswer(4, 'E')">By diving into knowledge quests and exploring new perspectives.</button>
                 </div>
                 <div class="card" id="card-5" role="region" aria-labelledby="q5-title">
-                    <h3 id="q5-title" style="color: #C9745D;">What motivates you in your work?</h3>
-                    <label><input type="radio" name="q5" value="A" required> Supporting and leading others.</label><br>
-                    <label><input type="radio" name="q5" value="B"> Enhancing teamwork and people skills.</label><br>
-                    <label><input type="radio" name="q5" value="C"> Creativity and independent work.</label><br>
-                    <label><input type="radio" name="q5" value="D"> Freedom and managing your own business.</label><br>
-                    <label><input type="radio" name="q5" value="E"> Exploring complex problems and gaining new knowledge.</label><br>
+                    <h3 id="q5-title">What motivates you in your work?</h3>
+                    <button class='red' type="button" onclick="selectAnswer(5, 'A')">Supporting and leading others.</button>
+                    <button class='yellow' type="button" onclick="selectAnswer(5, 'B')">Enhancing teamwork and people skills.</button>
+                    <button class='green' type="button" onclick="selectAnswer(5, 'C')">Creativity and independent work.</button>
+                    <button class='blue' type="button" onclick="selectAnswer(5, 'D')">Freedom and managing your own business.</button>
+                    <button class='purple' type="button" onclick="selectAnswer(5, 'E')">Exploring complex problems and gaining new knowledge.</button>
                 </div>
                 <div class="card" id="results-card" role="region" aria-labelledby="results-card">
                     <div id="result" aria-live="polite"></div>
                     <button id="downloadButton" style="display:none;" onclick="downloadResult()" aria-label="Download Result">Download Result</button>
                     <button id="shareButton" style="display:none;" onclick="shareResult()" aria-label="Share Result">Share Result</button>
-                    <button id="emailButton" style="display:none;" onclick="emailResult()" aria-label="Email Result">Email Result</button>
                 </div>
             </div>
             <div id="navigation">
-                <button type="button" onclick="previousCard()" aria-label="Previous Question">Previous</button>
-                <div class="progress" aria-label="Progress">
-                    <span id="progress-label">Question: </span>
-                    <div id="progress-bar-container">
-                        <div class="progress-segment" id="segment-1">1</div>
-                        <div class="progress-segment" id="segment-2">2</div>
-                        <div class="progress-segment" id="segment-3">3</div>
-                        <div class="progress-segment" id="segment-4">4</div>
-                        <div class="progress-segment" id="segment-5">5</div>
-                    </div>
-                </div>
-                <button type="button" onclick="nextCard()" aria-label="Next Question">Next</button>
-                <button type="button" id="submit-button" style="display: none;" onclick="calculateResult()" aria-label="Submit Quiz">Submit</button>
+                <button type="button" onclick="previousCard()" aria-label="Previous Question">< go back</button>
             </div>
         </form>
     </main>
