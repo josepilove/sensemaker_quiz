@@ -78,7 +78,7 @@ button:focus {
 
 #downloadButton, #shareButton, #emailButton {
     margin-top: 10px;
-}
+} 
 
 .progress {
     display: flex;
